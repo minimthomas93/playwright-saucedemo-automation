@@ -9,7 +9,6 @@
 import { test, expect } from '@playwright/test';
 import { loginpage } from '../pages/login-page';
 import logger from '../utils/logger-util';
-import { env } from '../config/env';
 import logindata from '../test-data/login-data.json';
 
 test('TC1 - verify whether user is landed on login page successfully ', async ({ page }) => {
