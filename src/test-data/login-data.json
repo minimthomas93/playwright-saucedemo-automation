@@ -1,0 +1,50 @@
+{
+    "validlogin": [
+        {
+            "username": "standard_user",
+            "password": "secret_sauce"
+        },
+        {
+            "username": "visual_user",
+            "password": "secret_sauce"
+        },
+        {
+            "username": "problem_user",
+            "password": "secret_sauce"
+        },
+        {
+            "username": "error_user",
+            "password": "secret_sauce"
+        }
+    ],
+    "lockedoutLogin": [
+        {
+            "username": "locked_out_user",
+            "password": "secret_sauce"
+        }
+    ],
+    "invalidusername": [
+        {
+            "username": "abc",
+            "password": "secret_sauce"
+        }
+    ],
+    "invalidpassword": [
+        {
+            "username": "standard_user",
+            "password": "badyyyy_qwerty"
+        }
+    ],
+    "emptyPassword": [
+        {
+            "username": "any_user",
+            "password": ""
+        }
+    ],
+    "emptyusernamepassword": [
+        {
+            "username": "",
+            "password": ""
+        }
+    ]
+}

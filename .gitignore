@@ -1,0 +1,16 @@
+
+# dependencies
+node_modules/
+
+#playwright generated files
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+#configuration files
+src/config/env.js
+
+#Logs
+src/logging/
