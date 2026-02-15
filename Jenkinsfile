@@ -1,8 +1,10 @@
 pipeline {
     agent any
+
     tools {
-        nodejs 'NodeJS' // the NodeJS tool you configured in Jenkins
+        nodejs 'NodeJS' 
     }
+
     stages {
         stage('Install Dependencies') {
             steps {
@@ -11,18 +13,22 @@ pipeline {
                 bat 'npx playwright install'
             }
         }
+
         stage('Run Playwright Tests') {
             steps {
                 echo 'Running Playwright tests...'
                 bat 'npx playwright test --reporter=html'
             }
         }
+
         stage('Archive Report') {
             steps {
+                echo 'Archiving Playwright HTML report...'
                 archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
             }
         }
     }
+
     post {
         always {
             echo 'Test run completed'
