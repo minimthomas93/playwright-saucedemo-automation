@@ -24,7 +24,14 @@ pipeline {
         stage('Archive Report') {
             steps {
                 echo 'Archiving Playwright HTML report...'
-                archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
+                publishHTML([
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'playwright-report',
+                    reportFiles: 'index.html',
+                    reportName: 'Playwright Test Report'
+                ])
             }
         }
     }
