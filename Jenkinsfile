@@ -5,6 +5,11 @@ pipeline {
         nodejs 'NodeJS' 
     }
 
+    environment {
+        APP_USERNAME = 'standard_user'
+        APP_PASSWORD = 'secret_sauce'
+        BASE_URL     = 'https://www.saucedemo.com/'
+    }
     stages {
         stage('Install Dependencies') {
             steps {
