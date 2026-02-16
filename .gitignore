@@ -9,6 +9,7 @@ node_modules/
 /playwright/.cache/
 /playwright/.auth/
 
+.env
 
 #Logs
 src/logging/

@@ -1,6 +1,7 @@
+import 'dotenv/config';
 import { env } from '../config/env.example';
 
-exports.loginpage = class LoginPage {
+export class LoginPage {
     constructor(page) {
         this.page = page
         this.loginPageTitle = page.locator('text = Swag Labs');
@@ -12,7 +13,7 @@ exports.loginpage = class LoginPage {
         this.lockedoutErrorMessage = page.locator('text = Epic sadface: Sorry, this user has been locked out.');
         this.emptyusernameErrorMessage = page.locator('text = Epic sadface: Username is required')
         this.emptyPasswordErrorMessage = page.locator('text = Epic sadface: Password is required')
-        this.homePageTitle = page.locator('[data-test="title"]');
+        //this.homePageTitle = page.locator('[data-test="title"]');
     }
 
     async openApplication() {
