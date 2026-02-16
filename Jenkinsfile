@@ -46,4 +46,7 @@ pipeline {
             echo 'Test run completed'
         }
     }
+    triggers {
+    pollSCM('H/5 * * * *')
+}
 }
