@@ -13,7 +13,7 @@ export class LoginPage {
         this.lockedoutErrorMessage = page.locator('text = Epic sadface: Sorry, this user has been locked out.');
         this.emptyusernameErrorMessage = page.locator('text = Epic sadface: Username is required')
         this.emptyPasswordErrorMessage = page.locator('text = Epic sadface: Password is required')
-        //this.homePageTitle = page.locator('[data-test="title"]');
+        
     }
 
     async openApplication() {

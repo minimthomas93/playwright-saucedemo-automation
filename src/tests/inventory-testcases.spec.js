@@ -141,3 +141,23 @@ test('TC11: Verify whether products are filtered properly for high to low @filte
     logger.info(`Expected product prices after sorting high to low: ${sortedProductPrices.join(', ')}`);
     await expect(productPrices).toEqual(sortedProductPrices);
 })
+
+
+test('TC12: Verify product title opens product detail page',async ({page}) => {
+    logger.info('TC12 Started');
+    const inventory = new InventoryPage(page);
+    const productName = await inventory.inventoryNames.first().textContent(); // Get the name of the first product in the inventory
+    await inventory.getProductByName(productName).click(); // Click on the product title to open the product detail page
+    await expect(page).toHaveURL('https://www.saucedemo.com/inventory-item.html?id=4'); // Verify that clicking on the product title navigates to the correct product detail page
+    await expect(inventory.inventoryNames).toHaveText(productName); // Verify that the product detail page displays the correct product name    
+})
+
+test('TC13: Verify Add to Cart button in product detail page',async ({page}) => {
+    logger.info('TC13 Started');
+    const inventory = new InventoryPage(page);
+    const productName = await inventory.inventoryNames.first().textContent();   // Get the name of the first product in the inventory
+    await inventory.getProductByName(productName).click();                      // Click on the product title to open the product detail page
+    await expect(inventory.addToCartDetailPageButton).toBeVisible();
+    await inventory.addToCartDetailPageButton.click();                          // Click on the Add to Cart button in the product detail page
+    await expect(inventory.removeCartDetailPageButton).toBeVisible();           // Verify that the Add to Cart button is replaced with the Remove button after clicking
+})

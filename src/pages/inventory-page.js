@@ -22,6 +22,9 @@ export class InventoryPage {
         this.inventoryNames = page.locator('[data-test="inventory-item-name"]');
         this.inventoryPrices = page.locator('[data-test="inventory-item-price"]');
         this.activeFilterOption = page.locator('[data-test="active-option"]');
+        this.homePageTitle = page.locator('[data-test="title"]');
+        this.addToCartDetailPageButton = page.locator('[data-test="add-to-cart"]');
+        this.removeCartDetailPageButton = page.locator('[data-test="remove"]');
     }
 
     async addProductToCart() {
@@ -103,6 +106,13 @@ export class InventoryPage {
 
     async getactiveFilter() {
         return await this.activeFilterOption.textContent();
+    }
+
+    getProductByName(productName) {
+        return this.page.locator(
+            '[data-test="inventory-item-name"]',
+            { hasText: productName }
+        );
     }
 
 }
