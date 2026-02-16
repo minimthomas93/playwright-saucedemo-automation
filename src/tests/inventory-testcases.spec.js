@@ -45,7 +45,7 @@ test('TC3: Verify the navigation to Cart Page',async({page}) => {
     logger.info('TC5 started');
     const inventory = new InventoryPage(page);
     await inventory.navigationToCartPage();
-    const cart = new cartpage(page);
+    const cart = new CartPage(page);
     await expect(cart.titleText).toBeVisible();
 })
 
@@ -79,7 +79,7 @@ test('TC6: Verify the navigation of Logout link',async({page}) => {
     const inventory = new InventoryPage(page);
     await inventory.openSidebar();
     await inventory.navigationOfLogout();
-    const login = new loginpage(page);
+    const login = new LoginPage(page);
     await expect(login.loginButton).toBeVisible();
 })
 
