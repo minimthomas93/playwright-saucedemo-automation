@@ -33,7 +33,7 @@ test('TC2: Verify Facebook Icon functionality', async ({ page }) => {
 
 })
 
-test.only('TC3: Verify linkedin Icon functionality', async ({ page }) => {
+test('TC3: Verify linkedin Icon functionality', async ({ page }) => {
     const footer = new FooterPage(page);
     await footer.clickLinkedinIcon();
     const newLinkedinTab = await page.waitForEvent('popup');
