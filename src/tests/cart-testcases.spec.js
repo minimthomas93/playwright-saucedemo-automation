@@ -1,12 +1,10 @@
-import 'dotenv/config';
-import { env } from '../config/env';
+import env from '../config/env';
 import { test, expect } from '@playwright/test';
 import { InventoryPage } from '../pages/inventory-page';
 import logger from '../utils/logger-util';
 import { CartPage } from '../pages/cart-page';
 import { CheckoutPage } from '../pages/checkout-page';
 import { LoginPage } from '../pages/login-page';
-
 
 test.beforeEach('Login to the application', async ({ page }) => {
 

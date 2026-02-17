@@ -4,7 +4,7 @@ import logger from '../utils/logger-util';
 import { CartPage } from '../pages/cart-page';
 import { CheckoutPage } from '../pages/checkout-page';
 import { LoginPage } from '../pages/login-page';
-import { env } from '../config/env';
+import env from '../config/env';
 
 test.beforeEach('Login to the application', async ({ page }) => {
 
@@ -22,7 +22,7 @@ test.beforeEach('Login to the application', async ({ page }) => {
 
 })
 
-test('TC1: Verify the navigation to Checkout step two page', async ({ page }) => {
+test.only('TC1: Verify the navigation to Checkout step two page', async ({ page }) => {
     logger.info('TC1 started');
     const checkout = new CheckoutPage(page);
     await checkout.enterFirstName('John');

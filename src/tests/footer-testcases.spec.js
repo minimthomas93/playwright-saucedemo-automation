@@ -2,7 +2,7 @@ import { FooterPage } from "../pages/footer-page";
 import { test, expect } from '@playwright/test';
 import logger from '../utils/logger-util'
 import { LoginPage } from "../pages/login-page";
-import { env } from '../config/env';
+import env from '../config/env';
 
 test.beforeEach('Login to the application', async ({ page }) => {
 
@@ -12,7 +12,6 @@ test.beforeEach('Login to the application', async ({ page }) => {
     await login.enterUsername(env.username);
     await login.enterPassword(env.password);
     await login.clickLoginButton();
-
 })
 
 test('TC1: Verify twitter Icon functionality', async ({ page }) => {

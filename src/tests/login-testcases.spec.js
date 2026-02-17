@@ -1,11 +1,3 @@
-//verify whether user is landed on login page successfully
-//verify whether user is able to login with valid credentials - 4 users
-//verify whether user is able to login with invalid username and valid password 
-//verify whether user is able to login with valid username and invalid password
-//verify whether user is able to login with blank credentials
-//verify whether user is able to login with locked out user credentials
-//verify whether user is able to login with invalid username and invalid password
-import 'dotenv/config';
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/login-page';
 import logger from '../utils/logger-util';
