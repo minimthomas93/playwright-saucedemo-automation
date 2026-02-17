@@ -115,7 +115,7 @@ test('TC9: Verify whether products are filtered properly for Z to A @filter',asy
 })
 
 
-test('TC10: Verify whether products are filtered properly for low to high @filter',async ({page}) => {
+test('TC10: Verify whether products are filtered properly for low to high filter',async ({page}) => {
     logger.info('TC10 Started');
     const inventory = new InventoryPage(page);
     await inventory.chooseLowToHighfilterOption();
@@ -127,7 +127,7 @@ test('TC10: Verify whether products are filtered properly for low to high @filte
     await expect(productPrices).toEqual(sortedProductPrices);
 })
 
-test('TC11: Verify whether products are filtered properly for high to low @filter',async ({page}) => {
+test('TC11: Verify whether products are filtered properly for high to low filter',async ({page}) => {
     logger.info('TC11 Started');
     const inventory = new InventoryPage(page);
     await inventory.chooseHighToLowfilterOption();

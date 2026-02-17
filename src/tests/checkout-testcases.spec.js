@@ -22,7 +22,7 @@ test.beforeEach('Login to the application', async ({ page }) => {
 
 })
 
-test.only('TC1: Verify the navigation to Checkout step two page', async ({ page }) => {
+test('TC1: Verify the navigation to Checkout step two page', async ({ page }) => {
     logger.info('TC1 started');
     const checkout = new CheckoutPage(page);
     await checkout.enterFirstName('John');
