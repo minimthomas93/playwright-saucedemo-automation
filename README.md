@@ -102,7 +102,7 @@ dd```
 dd npx playwright test --grep @smoke
 dd```
 
-### 🔁 Retry & Flaky Test Handling
+## 🔁 Retry & Flaky Test Handling
 
 Retries are configured in `playwright.config.js`:
 
@@ -112,7 +112,7 @@ retries: process.env.CI ? 2 : 0
 
 Retries are automatically enabled in CI environments.
 
-### ⚡ Parallel Execution
+## ⚡ Parallel Execution
 
 Parallel execution is enabled using Playwright workers:
 
@@ -123,7 +123,7 @@ workers: process.env.CI ? 2 : undefined
 This improves test execution speed in Jenkins CI.
 
 
-### 🧩 Custom Fixtures (Advanced)
+## 🧩 Custom Fixtures (Advanced)
 
 Custom fixtures are used to:
 
@@ -141,7 +141,7 @@ test('Checkout flow', async ({ inventoryPage, cartPage, checkoutPage }) => {
     await checkoutPage.completeCheckout();
 });
 
-### 📊 Test Reports
+## 📊 Test Reports
 
 After execution, Playwright generates:
 
@@ -169,7 +169,7 @@ Headless execution
 
 Report archiving
 
-### 🛡️ Credentials Handling
+## 🛡️ Credentials Handling
 
 No credentials are committed to Git
 
@@ -177,7 +177,7 @@ Uses environment variables for login
 
 Secure execution in CI environments
 
-### 📈 Future Enhancements
+## 📈 Future Enhancements
 
 API testing using Playwright request context
 
