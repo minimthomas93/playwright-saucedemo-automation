@@ -9,4 +9,4 @@ if (environment === 'qa') env = qaEnv;
 else if (environment === 'staging') env = stagingEnv;
 else if (environment === 'prod') env = prodEnv;
 
-export default env;
+module.exports = env;

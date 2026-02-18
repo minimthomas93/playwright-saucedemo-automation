@@ -1,42 +1,58 @@
-import { FooterPage } from "../pages/footer-page";
-import { test, expect } from '@playwright/test';
-import logger from '../utils/logger-util'
-import { LoginPage } from "../pages/login-page";
-import env from '../config/env';
+const { test, expect } = require('../fixtures/test-fixtures');
+const logger = require('../utils/logger-util');
 
-test.beforeEach('Login to the application', async ({ page }) => {
+test('TC1: Verify twitter Icon functionality', async ({ footerPage, page }) => {
+    logger.info('TC1 started');
+    test.info().annotations.push(
+        { type: 'feature', description: 'Twitter Icon Functionality' },
+        { type: 'tag', description: '@regression' },
+        { type: 'severity', description: 'Low' },
+        { type: 'env', description: process.env.TEST_ENV || 'qa' }
+    );
+    const [twitterPage] = await Promise.all([
+        page.waitForEvent('popup'),
+        footerPage.clickTwitterIcon()
+    ]);
+    await twitterPage.waitForLoadState();
+    await expect(twitterPage).toHaveURL('https://x.com/saucelabs');
 
-    logger.info('Login started');
-    const login = new LoginPage(page);
-    await login.openApplication();
-    await login.enterUsername(env.username);
-    await login.enterPassword(env.password);
-    await login.clickLoginButton();
-})
-
-test('TC1: Verify twitter Icon functionality', async ({ page }) => {
-    const footer = new FooterPage(page);
-    await footer.clickTwitterIcon();
-    const newTwitterTab = await page.waitForEvent('popup');
-    await newTwitterTab.waitForLoadState();
-    await expect(newTwitterTab).toHaveURL('https://x.com/saucelabs');
+    logger.info('Twitter icon is working successfully and navigated to correct URL');
 
 })
 
-test('TC2: Verify Facebook Icon functionality', async ({ page }) => {
-    const footer = new FooterPage(page);
-    await footer.clickFacebookIcon();
-    const newFacebookTab = await page.waitForEvent('popup');
-    await newFacebookTab.waitForLoadState();
-    await expect(newFacebookTab).toHaveURL('https://www.facebook.com/saucelabs');
+test('TC2: Verify Facebook Icon functionality', async ({ footerPage, page }) => {
+    logger.info('TC2 started');
+    test.info().annotations.push(
+        { type: 'feature', description: 'Facebook Icon Functionality' },
+        { type: 'tag', description: '@regression' },
+        { type: 'severity', description: 'Low' },
+        { type: 'env', description: process.env.TEST_ENV || 'qa' }
+    );
+    const [facebookPage] = await Promise.all([
+        page.waitForEvent('popup'),
+        footerPage.clickFacebookIcon()
+    ]);
+    await facebookPage.waitForLoadState();
+    await expect(facebookPage).toHaveURL('https://www.facebook.com/saucelabs');
+    logger.info('Facebook icon is working successfully and navigated to correct URL');
 
 })
 
-test('TC3: Verify linkedin Icon functionality', async ({ page }) => {
-    const footer = new FooterPage(page);
-    await footer.clickLinkedinIcon();
-    const newLinkedinTab = await page.waitForEvent('popup');
-    await newLinkedinTab.waitForLoadState();
-    await expect(newLinkedinTab).toHaveURL('https://www.linkedin.com/company/sauce-labs/');
+test('TC3: Verify linkedin Icon functionality', async ({ footerPage, page }) => {
+    logger.info('TC3 started');
+    test.info().annotations.push(
+        { type: 'feature', description: 'Linkedin Icon Functionality' },
+        { type: 'tag', description: '@regression' },
+        { type: 'severity', description: 'Low' },
+        { type: 'env', description: process.env.TEST_ENV || 'qa' }
+    );
+
+    const [linkedinPage] = await Promise.all([
+        page.waitForEvent('popup'),
+        footerPage.clickLinkedinIcon()
+    ])
+    await linkedinPage.waitForLoadState();
+    await expect(linkedinPage).toHaveURL('https://www.linkedin.com/company/sauce-labs/');
+    logger.info('Linkedin icon is working successfully and navigated to correct URL');
 
 })

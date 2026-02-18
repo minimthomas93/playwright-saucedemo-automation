@@ -6,16 +6,29 @@ import { InventoryPage } from '../pages/inventory-page'
 
 test('TC1 - verify whether user is landed on login page successfully ', async ({ page }) => {
     logger.info("TC1 Started");
+    test.info().annotations.push(
+        { type: 'feature', description: 'Navigation to Login Page' },
+        { type: 'tag', description: '@smoke' },
+        { type: 'severity', description: 'Critical' },
+        { type: 'env', description: process.env.TEST_ENV || 'qa' }
+    );
     const login = new LoginPage(page);
     await login.openApplication();
     await expect(login.loginPageTitle).toBeVisible();
+    logger.info("Login page is displayed successfully");
 })
 
-test.describe('Positive Login', () => {
+test.describe('Smoke Tests - Positive Login', () => {
 
     for (const credential of logindata.validlogin) {
-
         test(`TC2 - verify whether user is able to login with valid username and valid password for ${credential.username}`, async ({ page }) => {
+            logger.info(`TC2 started for user ${credential.username}`);
+            test.info().annotations.push(
+                { type: 'feature', description: 'Positive Logins' },
+                { type: 'tag', description: '@smoke' },
+                { type: 'severity', description: 'High' },
+                { type: 'env', description: process.env.TEST_ENV || 'qa' }
+            );
             const login = new LoginPage(page);
             await login.openApplication();
             await login.enterUsername(credential.username);
@@ -30,9 +43,16 @@ test.describe('Positive Login', () => {
 
 })
 
-test.describe('Invalid Login Scenarios @smoke', () => {
+test.describe('Regression Tests - Invalid Login Scenarios', () => {
     for (const credential of logindata.lockedoutLogin) {
         test(`TC3 - verify whether user is able to login with credentials of a lockedout user`, async ({ page }) => {
+            logger.info(`TC3 started for user ${credential.username}`);
+            test.info().annotations.push(
+                { type: 'feature', description: 'Negative Login-Lockedout User' },
+                { type: 'tag', description: '@regression' },
+                { type: 'severity', description: 'High' },
+                { type: 'env', description: process.env.TEST_ENV || 'qa' }
+            );
             const login = new LoginPage(page);
             await login.openApplication();
             await login.enterUsername(credential.username);
@@ -47,6 +67,13 @@ test.describe('Invalid Login Scenarios @smoke', () => {
 
     for (const credential of logindata.invalidusername) {
         test(`TC4 - verify whether user is able to login with invalid username and valid password`, async ({ page }) => {
+            logger.info(`TC4 started for user ${credential.username}`);
+            test.info().annotations.push(
+                { type: 'feature', description: 'Negative Login-Invalid Username' },
+                { type: 'tag', description: '@regression' },
+                { type: 'severity', description: 'High' },
+                { type: 'env', description: process.env.TEST_ENV || 'qa' }
+            );
             const login = new LoginPage(page);
             await login.openApplication();
             await login.enterUsername(credential.username);
@@ -62,6 +89,13 @@ test.describe('Invalid Login Scenarios @smoke', () => {
 
     for (const credential of logindata.invalidpassword) {
         test(`TC5 - verify whether user is able to login with valid username and invalid password`, async ({ page }) => {
+            logger.info(`TC5 started for user ${credential.username}`);
+            test.info().annotations.push(
+                { type: 'feature', description: 'Negative Login-Invalid Password' },
+                { type: 'tag', description: '@regression' },
+                { type: 'severity', description: 'High' },
+                { type: 'env', description: process.env.TEST_ENV || 'qa' }
+            );
             const login = new LoginPage(page);
             await login.openApplication();
             await login.enterUsername(credential.username);
@@ -76,6 +110,13 @@ test.describe('Invalid Login Scenarios @smoke', () => {
 
     for (const credential of logindata.emptyusernamepassword) {
         test(`TC6 - verify whether user is able to login with blank username and blank password`, async ({ page }) => {
+            logger.info(`TC6 started for user ${credential.username}`);
+            test.info().annotations.push(
+                { type: 'feature', description: 'Negative Login-Empty Username and Password' },
+                { type: 'tag', description: '@regression' },
+                { type: 'severity', description: 'High' },
+                { type: 'env', description: process.env.TEST_ENV || 'qa' }
+            );
             const login = new LoginPage(page);
             await login.openApplication();
             await login.enterUsername(credential.username);
@@ -90,6 +131,13 @@ test.describe('Invalid Login Scenarios @smoke', () => {
 
     for (const credential of logindata.emptyPassword) {
         test(`TC7 - verify whether user is able to login with valid username and empty password`, async ({ page }) => {
+            logger.info(`TC7 started for user ${credential.username}`);
+            test.info().annotations.push(
+                { type: 'feature', description: 'Negative Login-Empty Password' },
+                { type: 'tag', description: '@regression' },
+                { type: 'severity', description: 'High' },
+                { type: 'env', description: process.env.TEST_ENV || 'qa' }
+            );
             const login = new LoginPage(page);
             await login.openApplication();
             await login.enterUsername(credential.username);
