@@ -1,0 +1,2 @@
+2026-02-20 17:05:12 [info]: TC7 started
+2026-02-20 17:05:12 [info]: Item total, tax and total price are displayed successfully in checkout step two page

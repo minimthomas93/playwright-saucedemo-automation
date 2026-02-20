@@ -1,0 +1,2 @@
+2026-02-20 17:05:25 [info]: TC12 Started
+2026-02-20 17:05:25 [info]: Product detail page is opened successfully with correct product information

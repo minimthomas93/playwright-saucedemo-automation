@@ -1,0 +1,2 @@
+2026-02-20 17:05:17 [info]: TC6 started
+2026-02-20 17:05:18 [info]: Logout is successful and login page is displayed

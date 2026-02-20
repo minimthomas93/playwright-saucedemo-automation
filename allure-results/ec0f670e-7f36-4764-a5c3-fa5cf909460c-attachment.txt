@@ -1,0 +1,2 @@
+2026-02-20 17:04:55 [info]: TC3 started
+2026-02-20 17:04:57 [info]: Error message is displayed successfully for empty lastname field

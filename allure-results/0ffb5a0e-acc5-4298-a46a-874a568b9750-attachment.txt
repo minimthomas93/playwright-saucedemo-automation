@@ -1,0 +1,2 @@
+2026-02-20 17:02:11 [info]: TC2 started
+2026-02-20 17:02:11 [info]: Error message is displayed successfully for empty firstname field

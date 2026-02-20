@@ -1,0 +1,2 @@
+2026-02-20 17:04:56 [info]: TC1 started
+2026-02-20 17:04:58 [info]: Navigation to checkout step two page is successful

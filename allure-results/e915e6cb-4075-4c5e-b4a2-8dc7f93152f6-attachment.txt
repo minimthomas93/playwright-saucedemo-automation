@@ -1,0 +1,2 @@
+2026-02-20 17:01:54 [info]: TC5 started
+2026-02-20 17:01:55 [info]: Error message is displayed successfully for all empty fields

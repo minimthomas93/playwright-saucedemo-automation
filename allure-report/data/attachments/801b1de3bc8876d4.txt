@@ -1,0 +1,2 @@
+2026-02-20 17:01:54 [info]: TC8 started
+2026-02-20 17:01:54 [info]: Total price is calculated correctly in checkout step two page

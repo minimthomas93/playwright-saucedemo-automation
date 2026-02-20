@@ -1,0 +1,4 @@
+2026-02-20 17:05:36 [info]: TC9 Started
+2026-02-20 17:05:37 [info]: Product names after applying Z to A filter: Test.allTheThings() T-Shirt (Red), Sauce Labs Onesie, Sauce Labs Fleece Jacket, Sauce Labs Bolt T-Shirt, Sauce Labs Bike Light, Sauce Labs Backpack
+2026-02-20 17:05:37 [info]: Expected product names after sorting Z to A: Test.allTheThings() T-Shirt (Red), Sauce Labs Onesie, Sauce Labs Fleece Jacket, Sauce Labs Bolt T-Shirt, Sauce Labs Bike Light, Sauce Labs Backpack
+2026-02-20 17:05:37 [info]: Products are filtered properly for Z to A filter option

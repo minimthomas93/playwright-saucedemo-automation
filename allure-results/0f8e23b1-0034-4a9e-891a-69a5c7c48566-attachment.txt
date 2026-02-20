@@ -1,0 +1,2 @@
+2026-02-20 17:05:29 [info]: TC2 started for user error_user
+2026-02-20 17:05:31 [info]: login completed for user error_user

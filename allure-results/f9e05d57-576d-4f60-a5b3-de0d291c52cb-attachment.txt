@@ -1,0 +1,2 @@
+2026-02-20 17:05:32 [info]: TC5 started for user standard_user
+2026-02-20 17:05:33 [info]: login completed for user standard_user

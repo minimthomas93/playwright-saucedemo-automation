@@ -1,0 +1,2 @@
+2026-02-20 17:05:31 [info]: TC3 started for user locked_out_user
+2026-02-20 17:05:32 [info]: login completed for user locked_out_user

@@ -1,0 +1,2 @@
+2026-02-20 17:05:29 [info]: TC13 Started
+2026-02-20 17:05:29 [info]: Add to Cart functionality in product detail page is working successfully

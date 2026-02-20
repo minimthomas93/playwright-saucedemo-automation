@@ -1,0 +1,4 @@
+2026-02-20 17:05:25 [info]: TC11 Started
+2026-02-20 17:05:25 [info]: Product prices after applying high to low filter: $49.99, $29.99, $15.99, $15.99, $9.99, $7.99
+2026-02-20 17:05:25 [info]: Expected product prices after sorting high to low: $49.99, $29.99, $15.99, $15.99, $9.99, $7.99
+2026-02-20 17:05:25 [info]: Products are filtered properly for high to low filter option

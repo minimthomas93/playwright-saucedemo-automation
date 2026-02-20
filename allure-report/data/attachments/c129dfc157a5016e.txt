@@ -1,0 +1,2 @@
+2026-02-20 17:02:01 [info]: TC12 started
+2026-02-20 17:02:01 [info]: Success message is displayed correctly after order completion
