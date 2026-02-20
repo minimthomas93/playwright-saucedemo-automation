@@ -26,10 +26,13 @@ pipeline {
             }
         }
 
-                stage('Generate Allure Report') {
+        stage('Publish Allure Report') {
             steps {
-                echo 'Generating Allure report...'
-                bat 'allure generate allure-results --clean -o allure-report'
+                allure([
+                    includeProperties: false,
+                    jdk: '',
+                    results: [[path: 'allure-results']]
+                ])
             }
         }
 
