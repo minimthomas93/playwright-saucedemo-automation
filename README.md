@@ -1,6 +1,6 @@
 # Playwright Automation Framework – SauceDemo
 
-End-to-end UI test automation framework built using **Playwright (JavaScript)** following **industry best practices**, including Page Object Model (POM), custom fixtures, multi-environment support, CI integration, tagging, retries, parallel execution, and reporting.
+End-to-end UI test automation framework built using **Playwright (JavaScript)** following **industry best practices**, including Page Object Model (POM), custom fixtures, multi-environment support, CI integration, tagging, retries, parallel execution, and reporting (html and allure).
 
 ---
 
@@ -141,53 +141,44 @@ test('Checkout flow', async ({ inventoryPage, cartPage, checkoutPage }) => {
     await checkoutPage.completeCheckout();
 });
 
-## 📊 Test Reports
+---
 
-After execution, Playwright generates:
+## 📊 Reporting (HTML + Allure)
 
-HTML reports
+This framework supports:
 
-Screenshots on failure
+- ✅ Playwright HTML Report (default)
+- ✅ Allure Report (advanced reporting)
 
-View report locally
-npx playwright show-report
+Allure provides:
+- Interactive dashboards
+- Test categorization (feature, severity, tags)
+- Screenshot attachments
+- CI-friendly reporting
+
+---
+
+### Install Allure
+
+```bash
+npm install -D allure-playwright
+npm install -g allure-commandline --save-dev
+```
+
+### Configure Playwright
+Update `playwright.config.js`
+
+reporter: [
+  ['html'],
+  ['allure-playwright']
+],
 
 
-In Jenkins, reports are archived as build artifacts.
+### Generate Allure Report
 
-🔧 Jenkins CI Integration
+```bash
+npx playwright test
+allure serve allure-results
+```
 
-The framework integrates with Jenkins using a Jenkinsfile.
-
-Features:
-
-Automated builds triggered on SCM changes
-
-Environment-based execution
-
-Headless execution
-
-Report archiving
-
-## 🛡️ Credentials Handling
-
-No credentials are committed to Git
-
-Uses environment variables for login
-
-Secure execution in CI environments
-
-## 📈 Future Enhancements
-
-API testing using Playwright request context
-
-Cross-browser testing (Firefox, WebKit)
-
-Visual regression testing
-
-Dockerized test execution
-
-Slack / Email notifications
-
-Advanced reporting (Allure, HTML + JSON)
 
