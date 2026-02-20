@@ -26,7 +26,14 @@ pipeline {
             }
         }
 
-        stage('Archive Report') {
+                stage('Generate Allure Report') {
+            steps {
+                echo 'Generating Allure report...'
+                bat 'allure generate allure-results --clean -o allure-report'
+            }
+        }
+
+        stage('Archive HTML Report') {
             steps {
                 echo 'Archiving Playwright HTML report...'
                 publishHTML([
@@ -35,7 +42,7 @@ pipeline {
                     keepAll: true,
                     reportDir: 'playwright-report',
                     reportFiles: 'index.html',
-                    reportName: 'Playwright Test Report'
+                    reportName: 'Playwright HTML Report'
                 ])
             }
         }
