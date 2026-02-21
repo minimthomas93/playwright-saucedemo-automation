@@ -33,6 +33,7 @@ Jenkinsfile
 - ✅ Custom Playwright fixtures for reusable workflows
 - ✅ Multi-environment support (qa, staging)
 - ✅ Test tagging (@smoke, @regression)
+- ✅ Encrypted login credentials
 - ✅ Retry logic & flaky test handling
 - ✅ Parallel execution
 - ✅ Jenkins CI integration
@@ -41,6 +42,7 @@ Jenkinsfile
 - ✅ Clean & maintainable test structure
 
 ---
+
 
 ## 🌍 Environment Configuration
 Supports multiple environments using `TEST_ENV`.
@@ -93,14 +95,21 @@ npx playwright test
 ### Run a specific test file
 
 ```bash
-dd npx playwright test inventory-testcases.spec.js
-dd```
+ npx playwright test inventory-testcases.spec.js
+```
 
 ## Run tests by tag
 
 ```bash
-dd npx playwright test --grep @smoke
-dd```
+ npx playwright test --grep @smoke
+```
+
+## 🔒 Encrypted Credentials
+
+- Login credentials (`username` and `password`) are stored in environment-specific configuration files (e.g., `env.qa`, `env.staging`, `env.prod`) in **encrypted format**.  
+- The framework automatically **decrypts credentials at runtime** using a secure key stored in environment variables (SALT).  
+- This ensures no sensitive data is hardcoded or exposed in the repository.  
+- Users can safely switch between environments (`qa`, `staging`, `prod`) without modifying the source code.
 
 ## 🔁 Retry & Flaky Test Handling
 
@@ -111,6 +120,7 @@ retries: process.env.CI ? 2 : 0
 ```
 
 Retries are automatically enabled in CI environments.
+
 
 ## ⚡ Parallel Execution
 
