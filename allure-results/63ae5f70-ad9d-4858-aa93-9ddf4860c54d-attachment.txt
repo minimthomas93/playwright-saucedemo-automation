@@ -1,0 +1,2 @@
+2026-02-21 00:54:35 [info]: TC7 started for user any_user
+2026-02-21 00:54:35 [info]: login completed for user any_user

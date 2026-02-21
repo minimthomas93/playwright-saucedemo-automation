@@ -1,0 +1,2 @@
+2026-02-21 00:53:50 [info]: TC2 started
+2026-02-21 00:53:50 [info]: Product is removed from cart successfully using remove button

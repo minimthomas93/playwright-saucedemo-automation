@@ -1,0 +1,2 @@
+2026-02-21 01:08:08 [info]: TC1 started
+2026-02-21 01:08:08 [info]: Products are added to cart successfully and product details are correct in cart page

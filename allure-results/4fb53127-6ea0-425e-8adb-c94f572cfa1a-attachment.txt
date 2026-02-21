@@ -1,0 +1,7 @@
+Raw env.username: U2FsdGVkX1/ymQZgE4O52MsqtcYRob5rsEdpOd/pmdw=
+Raw process.env.USERNAME: 91996
+2026-02-21 00:53:01 [info]: Decrypted cipher username: standard_user
+2026-02-21 00:53:01 [info]: Decrypted username: standard_user
+2026-02-21 00:53:01 [info]: Decrypted password: secret_sauce
+2026-02-21 00:53:01 [info]: TC1 started
+2026-02-21 00:53:02 [info]: Products are added to cart successfully and product details are correct in cart page

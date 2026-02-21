@@ -3,6 +3,13 @@ import { LoginPage } from '../pages/login-page';
 import logger from '../utils/logger-util';
 import logindata from '../test-data/login-data.json';
 import { InventoryPage } from '../pages/inventory-page'
+import { decrypt,encrypt } from '../utils/cryptoJS-util';
+import { encryptEnvFile, decryptEnvFile } from '../utils/EncryptEnvFile';
+
+test.only('Sample encryption test ', async ({ page }) => {
+    encryptEnvFile();
+})
+
 
 test('TC1 - verify whether user is landed on login page successfully ', async ({ page }) => {
     logger.info("TC1 Started");

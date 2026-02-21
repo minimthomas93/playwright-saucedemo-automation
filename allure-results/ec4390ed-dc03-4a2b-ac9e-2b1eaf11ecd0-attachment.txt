@@ -1,0 +1,2 @@
+2026-02-21 00:55:06 [info]: TC10 started
+2026-02-21 00:55:07 [info]: Cancel button functionality is working successfully and navigated back to inventory page

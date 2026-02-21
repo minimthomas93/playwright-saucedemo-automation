@@ -1,0 +1,2 @@
+2026-02-21 00:55:01 [info]: TC4 started
+2026-02-21 00:55:01 [info]: Error message is displayed successfully for empty postal code field

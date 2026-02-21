@@ -1,0 +1,2 @@
+2026-02-21 00:55:01 [info]: TC6 started
+2026-02-21 00:55:01 [info]: Cancel button functionality is working successfully and navigated back to cart page

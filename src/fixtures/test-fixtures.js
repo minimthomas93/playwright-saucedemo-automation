@@ -4,14 +4,16 @@ const { InventoryPage } = require('../pages/inventory-page');
 const { CartPage } = require('../pages/cart-page');
 const { CheckoutPage } = require('../pages/checkout-page');
 const { FooterPage } = require('../pages/footer-page');
-const env = require('../config/env');
+const {env} = require('../config/env');
+const { decrypt } = require('../utils/cryptoJS-util')
+import logger from '../utils/logger-util';
 
 const test = base.extend({
     loginPage: async ({ page }, use) => {
         const login = new LoginPage(page);
         await login.openApplication();
-        await login.enterUsername(env.username);
-        await login.enterPassword(env.password);
+        await login.enterUsername(decrypt(env.username));
+        await login.enterPassword(decrypt(env.password));
         await login.clickLoginButton();
         await use(login);
     },

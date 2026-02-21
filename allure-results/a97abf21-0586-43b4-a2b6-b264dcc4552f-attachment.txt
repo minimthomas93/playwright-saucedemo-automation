@@ -1,0 +1,2 @@
+2026-02-21 00:54:30 [info]: TC1 Started
+2026-02-21 00:54:32 [info]: Login page is displayed successfully

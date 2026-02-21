@@ -1,0 +1,4 @@
+2026-02-21 00:23:37 [info]: Decrypted cipher username: standard_user
+2026-02-21 00:23:37 [info]: Decrypted username: 
+2026-02-21 00:23:37 [info]: Decrypted password: secret_sauce
+2026-02-21 00:23:37 [info]: TC1 started

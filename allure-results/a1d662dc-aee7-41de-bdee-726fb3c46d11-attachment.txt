@@ -1,0 +1,6 @@
+Raw env.username: 91996
+Raw process.env.USERNAME: 91996
+2026-02-21 00:35:43 [info]: Decrypted cipher username: standard_user
+2026-02-21 00:35:43 [info]: Decrypted username: 
+2026-02-21 00:35:43 [info]: Decrypted password: secret_sauce
+2026-02-21 00:35:43 [info]: TC1 started
